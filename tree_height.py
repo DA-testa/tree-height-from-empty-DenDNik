@@ -34,11 +34,11 @@ def main():
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
     choice = input()
-    if (choice=="F"):
+    if "F" in choice:
         lines = open("./test/"+str(input()),"r").readlines()
         n = int(lines[0])
         parents = list(map(int, lines[1].split()))
-    else:
+    if "I" in choice:
         n = int(input())
         parents = list(map(int, input().split()))
     print(compute_height(n, parents))
